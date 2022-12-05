@@ -56,6 +56,7 @@ hiking on the Pacific Crest Trail.
 ## Publications
 
 - [Synthesizing Open Worlds with Constraints using Locally Annealed Reversible Jump MCMC](https://graphics.stanford.edu/~lfyg/owl.pdf)
+
   A while ago I worked at the Stanford Graphics Labs. This paper leverages
   lays out a system where users could enter a system of constrains, and randomly
   sample layouts that met these constraints. I helped apply to concept to
