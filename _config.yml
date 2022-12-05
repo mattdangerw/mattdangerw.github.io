@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
 title: Matt Watson
 description: My personal site with recent projects and publications.
+remote_theme: pages-themes/primer@v0.2.0
+plugins:
+- jekyll-remote-theme
