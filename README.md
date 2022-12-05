@@ -1,5 +1,3 @@
-# Matthew Watson
-
 Hello! I am software engineer at Google working on the Keras and Tensorflow
 teams. I am currently working on developing [KerasNLP](https://github.com/keras-team/keras-nlp),
 a new open source library for NLP workflows within Keras ecosystem.
