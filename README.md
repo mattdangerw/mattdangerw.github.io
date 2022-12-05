@@ -30,13 +30,13 @@ hiking on the Pacific Crest Trail.
 
   <a href="http://www.youtube.com/watch?feature=player_embedded&v=GVShIIh3_yE"
   target="_blank"><img src="http://img.youtube.com/vi/GVShIIh3_yE/0.jpg"
-  alt="Keras Preprocessing Layers" width="360" height="270" border="10" /></a>
+  alt="Keras Preprocessing Layers" width="240" height="180" border="10" /></a>
 
 - A walkthrough of NLP workflows in Keras given with Chen Qian.
 
   <a href="http://www.youtube.com/watch?feature=player_embedded&v=gZIP-_2XYMM"
   target="_blank"><img src="http://img.youtube.com/vi/gZIP-_2XYMM/0.jpg"
-  alt="NLP Workflows with Keras" width="360" height="270" border="10" /></a>
+  alt="NLP Workflows with Keras" width="240" height="180" border="10" /></a>
 
 ## Writings
 
