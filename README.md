@@ -26,7 +26,7 @@ hiking on the Pacific Crest Trail.
 
 ## Talks
 
-- An Tech Talk for Tensorflow on Keras Preprocessing Layers.
+- A tech talk for Tensorflow on Keras Preprocessing Layers.
 
   <a href="http://www.youtube.com/watch?feature=player_embedded&v=GVShIIh3_yE"
   target="_blank"><img src="http://img.youtube.com/vi/GVShIIh3_yE/0.jpg"
@@ -55,7 +55,7 @@ hiking on the Pacific Crest Trail.
 
 - [Synthesizing Open Worlds with Constraints using Locally Annealed Reversible Jump MCMC](https://graphics.stanford.edu/~lfyg/owl.pdf)
 
-  A while ago I worked at the Stanford Graphics Labs. This paper leverages
-  lays out a system where users could enter a system of constrains, and randomly
-  sample layouts that met these constraints. I helped apply to concept to
-  procedural level generation in video games.
+  During my masters I worked at the Stanford Graphics Labs. This paper lays out
+  a system where users could enter a system of constrains, and randomly sample
+  layouts that met these constraints using a type of probabilistic model called
+  a factor graph.
