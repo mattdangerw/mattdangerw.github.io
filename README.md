@@ -1,4 +1,4 @@
-Hello! I am software engineer at Google working on the Keras and Tensorflow
+Hello! I am a software engineer at Google working on the Keras and TensorFlow
 teams. I am currently working on developing [KerasNLP](https://github.com/keras-team/keras-nlp),
 a new open source library for NLP workflows within Keras ecosystem.
 
@@ -42,7 +42,7 @@ hiking on the Pacific Crest Trail.
 
 - [Pretraining a Transformer from scratch with KerasNLP](https://keras.io/guides/keras_nlp/transformer_pretraining/)
   
-  A guide on pretraining a transformer with a masked langauge modeling tasks
+  A guide on pre-training a transformer with a masked language modeling loss
   that also serves as an introduction to the lower-level building blocks in the
   KerasNLP library.
 
