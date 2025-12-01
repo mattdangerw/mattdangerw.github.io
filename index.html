@@ -7,55 +7,68 @@
     <meta name="description" content="Personal Site">
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-color: #24292f;
-            --link-color: #0969da;
-            --border-color: #d0d7de;
-            --secondary-text: #57606a;
+            --bg-color: #fdfbf7;
+            --text-color: #3b3836;
+            --link-color: #9e4226; /* Rust/Clay */
+            --link-hover: #6d2e1a;
+            --border-color: #dcd6cc;
+            --meta-color: #6b655f;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-            line-height: 1.6;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            line-height: 1.7;
             color: var(--text-color);
-            max-width: 800px;
+            max-width: 740px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 3rem 1.5rem;
             background-color: var(--bg-color);
         }
 
         header {
-            margin-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
         }
 
         h1 {
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 2.5rem;
+            font-weight: normal;
+            letter-spacing: 0.05em;
             margin-bottom: 0.5rem;
+            color: #2c2926;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            display: inline-block;
+            width: 100%;
         }
 
         p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
         }
 
         a {
             color: var(--link-color);
             text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: var(--link-hover);
+            border-bottom: 1px solid var(--link-hover);
         }
 
         h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.3em;
+            font-size: 1.4rem;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
             border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            color: #595450;
         }
 
         ul {
@@ -64,53 +77,89 @@
         }
 
         li {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
-        li strong, li a {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
+        .item-title {
+            font-weight: bold;
+            font-size: 1.15rem;
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #2c2926;
+        }
+
+        a.item-title {
+            text-decoration: none;
+            border-bottom: none;
         }
         
-        /* For the links that were inline in the markdown but block-like in structure */
-        .item-title {
-            font-weight: 600;
-            display: inline-block; 
+        a.item-title:hover {
+            text-decoration: underline;
+            color: var(--link-hover);
         }
 
         .item-description {
             display: block;
             color: var(--text-color);
-            margin-top: 0.25rem;
+            font-size: 1rem;
+        }
+
+        /* Publication styling */
+        .publication-item {
+            margin-bottom: 1rem;
+        }
+
+        /* Video Section Styling */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-item {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.03);
+        }
+        
+        .video-item .item-title {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            min-height: 3em; /* Align titles roughly */
+        }
+
+        .video-link {
+            display: block;
+            line-height: 0;
+            align-self: center;
         }
 
         img {
             max-width: 100%;
             height: auto;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-        }
-        
-        .video-link {
-            display: inline-block;
-            margin-top: 0.5rem;
+            filter: sepia(20%); /* Slight sepia for bookish feel */
+            transition: filter 0.3s;
         }
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #0d1117;
-                --text-color: #c9d1d9;
-                --link-color: #58a6ff;
-                --border-color: #30363d;
-                --secondary-text: #8b949e;
+        img:hover {
+            filter: sepia(0%);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
             }
             
-            img {
-                opacity: 0.8; 
+            .video-grid {
+                grid-template-columns: 1fr;
             }
             
-            img:hover {
-                opacity: 1;
+            .video-item .item-title {
+                min-height: auto;
             }
         }
     </style>
@@ -124,7 +173,7 @@
 <main>
     <p>Hello! I am a software engineer at Google working on Reinforcement Learning for the Gemini model. I'm also a core maintainer of the Keras deep learning library and co-author of the Deep Learning with Python book.</p>
 
-    <p>Almost an English major, I'm interested in fuzzy human problems and their intersection with technology. I am deeply interested in improving our fundamental understanding of language models, and increasing general public awareness of how these tools work and where they fail.</p>
+    <p>Almost an English major, I'm interested in fuzzy human problems and their intersection with technology. I am deeply interested in improving our fundamental understanding of language models, and making the field more accessible as a whole.</p>
 
     <p>Below is some of my public work. Find me on <a href="https://github.com/mattdangerw">Github</a>, <a href="https://www.linkedin.com/in/mattdangerw/">LinkedIn</a>, and <a href="https://twitter.com/mattdangerw">Twitter</a>.</p>
 
@@ -142,32 +191,32 @@
 
     <h2>Publications</h2>
     <ul>
-        <li>François Chollet and Matthew Watson. <a href="https://deeplearningwithpython.io"><i>Deep learning with Python</i></a>. 3rd ed., Manning Publications, 2025.</li>
-        <li>Watson, et al. &ldquo;<a href="https://www.jmlr.org/papers/volume25/24-0404/24-0404.pdf">KerasCV and KerasNLP: Multi-framework Models.</a>&rdquo; <i>Journal of Machine Learning Research</i>, 2024.</li>
-        <li>Yi-Ting, Yang, Watson, Goodman, and Hanrahan. &ldquo;<a href="https://graphics.stanford.edu/~lfyg/owl.pdf">Synthesizing open worlds with constraints using locally annealed reversible jump MCMC.</a>&rdquo; <i>ACM Transactions on Graphics</i>, 2012.</li>
+        <li class="publication-item">François Chollet and Matthew Watson. <a href="https://deeplearningwithpython.io"><i>Deep learning with Python</i></a>. 3rd ed., Manning Publications, 2025.</li>
+        <li class="publication-item">Watson, et al. &ldquo;<a href="https://www.jmlr.org/papers/volume25/24-0404/24-0404.pdf">KerasCV and KerasNLP: Multi-framework Models.</a>&rdquo; <i>Journal of Machine Learning Research</i>, 2024.</li>
+        <li class="publication-item">Yi-Ting, Yang, Watson, Goodman, and Hanrahan. &ldquo;<a href="https://graphics.stanford.edu/~lfyg/owl.pdf">Synthesizing open worlds with constraints using locally annealed reversible jump MCMC.</a>&rdquo; <i>ACM Transactions on Graphics</i>, 2012.</li>
     </ul>
     
     <h2>Talks</h2>
-    <ul>
-        <li>
+    <div class="video-grid">
+        <div class="video-item">
             <div class="item-title">Keras: Deep Learning Framework for JAX.</div>
             <a href="http://www.youtube.com/watch?feature=player_embedded&v=6NTHvcXAl90" target="_blank" class="video-link">
                 <img src="http://img.youtube.com/vi/6NTHvcXAl90/0.jpg" alt="Keras at JAX DevLab" width="240" height="180">
             </a>
-        </li>
-        <li>
+        </div>
+        <div class="video-item">
             <div class="item-title">A tech talk for Tensorflow on Keras Preprocessing Layers.</div>
             <a href="http://www.youtube.com/watch?feature=player_embedded&v=GVShIIh3_yE" target="_blank" class="video-link">
                 <img src="http://img.youtube.com/vi/GVShIIh3_yE/0.jpg" alt="Keras Preprocessing Layers" width="240" height="180">
             </a>
-        </li>
-        <li>
+        </div>
+        <div class="video-item">
             <div class="item-title">A walkthrough of NLP workflows in Keras given with Chen Qian.</div>
             <a href="http://www.youtube.com/watch?feature=player_embedded&v=gZIP-_2XYMM" target="_blank" class="video-link">
                 <img src="http://img.youtube.com/vi/gZIP-_2XYMM/0.jpg" alt="NLP Workflows with Keras" width="240" height="180">
             </a>
-        </li>
-    </ul>
+        </div>
+    </div>
 </main>
 
 </body>
