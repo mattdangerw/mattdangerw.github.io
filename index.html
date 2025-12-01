@@ -111,7 +111,6 @@
         li {
             margin-bottom: 2rem;
             position: relative;
-            padding-left: 1.5rem;
         }
 
         .item-title {
@@ -155,35 +154,47 @@
             font-size: 1.5rem;
         }
 
-        /* Video Grid */
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
+        .talk-list li {
+            display: flex;
+            align-items: flex-start; /* Align text to top of thumbnail */
+            margin-bottom: 1.5rem;
+        }
+        
+        .talk-list li::before {
+            content: none; /* Remove default bookish bullet */
         }
 
-        .video-item {
-            text-align: center;
-        }
-
-        .video-item .item-title {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            min-height: auto;
-            font-style: italic;
-        }
-
-        img {
-            max-width: 100%;
+        .talk-list .video-link {
+            flex-shrink: 0; /* Don't allow image to shrink */
+            margin-right: 1rem;
+            display: block; /* Ensure link behaves as a block for sizing */
+            width: 120px; /* Fixed width for thumbnail */
             height: auto;
+            line-height: 0; /* Remove extra space below image */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             border-radius: 2px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .talk-list .video-link img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Cover the area without distortion */
+            filter: none; /* Remove sepia filter for thumbs */
+            transition: transform 0.2s ease;
         }
 
-        img:hover {
-            transform: scale(1.02);
+        .talk-list .video-link img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
         }
+
+        .talk-list .item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            line-height: 1.4;
+        }
+
     </style>
 </head>
 <body>
@@ -196,7 +207,7 @@
 <main>
     <p>Hello! I am a software engineer at Google working on Reinforcement Learning for the Gemini model. I'm also a core maintainer of the Keras deep learning library and co-author of the Deep Learning with Python book.</p>
 
-    <p>Almost an English major, I'm interested in fuzzy human problems and their intersection with technology. I am deeply interested in improving our fundamental understanding of language models, and making the field more accessible as a whole.</p>
+    <p>Almost an English major, I'm fascinated by fuzzy human problems and their intersection with technology. I am deeply interested in improving our fundamental understanding of language models, and making the field more accessible as a whole.</p>
 
     <div class="social-links">
         <a href="https://github.com/mattdangerw"><i class="fab fa-github"></i> Github</a>
@@ -224,26 +235,26 @@
     </ul>
     
     <h2>Talks</h2>
-    <div class="video-grid">
-        <div class="video-item">
-            <div class="item-title">Keras: Deep Learning Framework for JAX.</div>
-            <a href="http://www.youtube.com/watch?feature=player_embedded&v=6NTHvcXAl90" target="_blank">
+    <ul class="talk-list">
+        <li>
+            <a href="http://www.youtube.com/watch?feature=player_embedded&v=6NTHvcXAl90" target="_blank" class="video-link">
                 <img src="http://img.youtube.com/vi/6NTHvcXAl90/0.jpg" alt="Keras at JAX DevLab">
             </a>
-        </div>
-        <div class="video-item">
-            <div class="item-title">A tech talk for Tensorflow on Keras Preprocessing Layers.</div>
-            <a href="http://www.youtube.com/watch?feature=player_embedded&v=GVShIIh3_yE" target="_blank">
+            <span class="item-title">Keras: Deep Learning Framework for JAX.</span>
+        </li>
+        <li>
+            <a href="http://www.youtube.com/watch?feature=player_embedded&v=GVShIIh3_yE" target="_blank" class="video-link">
                 <img src="http://img.youtube.com/vi/GVShIIh3_yE/0.jpg" alt="Keras Preprocessing Layers">
             </a>
-        </div>
-        <div class="video-item">
-            <div class="item-title">A walkthrough of NLP workflows in Keras given with Chen Qian.</div>
-            <a href="http://www.youtube.com/watch?feature=player_embedded&v=gZIP-_2XYMM" target="_blank">
+            <span class="item-title">A tech talk for Tensorflow on Keras Preprocessing Layers.</span>
+        </li>
+        <li>
+            <a href="http://www.youtube.com/watch?feature=player_embedded&v=gZIP-_2XYMM" target="_blank" class="video-link">
                 <img src="http://img.youtube.com/vi/gZIP-_2XYMM/0.jpg" alt="NLP Workflows with Keras">
             </a>
-        </div>
-    </div>
+            <span class="item-title">A walkthrough of NLP workflows in Keras given with Chen Qian.</span>
+        </li>
+    </ul>
 </main>
 
 </body>
