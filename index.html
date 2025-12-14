@@ -182,11 +182,15 @@
             height: auto;
             object-fit: cover; /* Cover the area without distortion */
             filter: none; /* Remove sepia filter for thumbs */
-            transition: transform 0.2s ease;
         }
 
-        .talk-list .video-link img:hover {
-            transform: scale(1.05); /* Slight zoom on hover */
+        .talk-list .video-link {
+            border: none;
+        }
+
+        .talk-list .video-link:hover {
+            background: none;
+            transform: translateY(-2px);
         }
 
         .talk-list .item-title {
@@ -210,8 +214,10 @@
 
     <p>Almost an English major, I'm fascinated by fuzzy human problems and their intersection with technology. I am deeply interested in improving our fundamental understanding of language models, and making the field more accessible as a whole.</p>
 
+    <p>LinkedIn will be a better log of my work history, but below is a collection of public projects and talks.</p>
+
     <div class="social-links">
-        <a href="https://github.com/mattdangerw" aria-label="GitHub"><i class="fab fa-github"></i> Github</a>
+        <a href="https://github.com/mattdangerw" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
         <a href="https://www.linkedin.com/in/mattdangerw/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <a href="https://twitter.com/mattdangerw" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
     </div>
@@ -241,19 +247,19 @@
             <a href="http://www.youtube.com/watch?feature=player_embedded&v=6NTHvcXAl90" target="_blank" class="video-link">
                 <img src="http://img.youtube.com/vi/6NTHvcXAl90/0.jpg" alt="Keras at JAX DevLab">
             </a>
-            <span class="item-title">A walkthrough of the Keras ecosystem for a JAX and XLA developer conference.</span>
+            <a href="http://www.youtube.com/watch?feature=player_embedded&v=6NTHvcXAl90" target="_blank" class="item-title">A walkthrough of the Keras ecosystem for a JAX and XLA developer conference.</a>
         </li>
         <li>
             <a href="http://www.youtube.com/watch?feature=player_embedded&v=GVShIIh3_yE" target="_blank" class="video-link">
                 <img src="http://img.youtube.com/vi/GVShIIh3_yE/0.jpg" alt="Keras Preprocessing Layers">
             </a>
-            <span class="item-title">A tech talk for Tensorflow on Keras Preprocessing Layers.</span>
+            <a href="http://www.youtube.com/watch?feature=player_embedded&v=GVShIIh3_yE" target="_blank" class="item-title">A tech talk for Tensorflow on Keras Preprocessing Layers.</a>
         </li>
         <li>
             <a href="http://www.youtube.com/watch?feature=player_embedded&v=gZIP-_2XYMM" target="_blank" class="video-link">
                 <img src="http://img.youtube.com/vi/gZIP-_2XYMM/0.jpg" alt="NLP Workflows with Keras">
             </a>
-            <span class="item-title">A walkthrough of NLP workflows in Keras given with Chen Qian.</span>
+            <a href="http://www.youtube.com/watch?feature=player_embedded&v=gZIP-_2XYMM" target="_blank" class="item-title">A walkthrough of NLP workflows in Keras given with Chen Qian.</a>
         </li>
     </ul>
 </main>
